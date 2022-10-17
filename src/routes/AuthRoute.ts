@@ -25,6 +25,18 @@ class AuthRoute implements IRoute {
       controller.login(req, res, data);
     });
 
+    this._router.get("/logout", (req, res): void => {
+      controller.logout(req, res);
+    });
+
+    this._router.get("/get-session", (req, res): void => {
+      controller.getSession(req, res);
+    });
+
+    this._router.get("/refresh-token", (req, res): void => {
+      controller.refreshToken(req, res);
+    });
+
     this._app.use(this._router);
   }
 }
