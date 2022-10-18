@@ -19,7 +19,7 @@ interface IData {
   deskripsi: string;
 }
 
-const controller = new BarangController<IData>();
+const controller = new BarangController();
 const middlewares = new Middlewares();
 
 class BarangRoute implements IRoute {

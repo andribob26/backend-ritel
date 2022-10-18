@@ -10,7 +10,7 @@ interface IReqData {
   size: number;
 }
 
-class Controller<T, T2> implements IController {
+class Controller<T> implements IController {
   protected _model: Pagination<T>;
   protected _condition: any = {};
 
@@ -63,7 +63,7 @@ class Controller<T, T2> implements IController {
     }
   }
 
-  async addData(req: Request, res: Response, data: T2): Promise<any> {
+  async addData(req: Request, res: Response, data: any): Promise<any> {
     const responseData = new ResponseData(res);
     try {
       const result = await new this._model(data).save();
@@ -90,7 +90,7 @@ class Controller<T, T2> implements IController {
     }
   }
 
-  async addDataWithImage(req: Request, res: Response, data: T2): Promise<any> {
+  async addDataWithImage(req: Request, res: Response, data: any): Promise<any> {
     const responseData = new ResponseData(res);
     await Cloudinary.upload<T>(
       this._model,
@@ -176,7 +176,7 @@ class Controller<T, T2> implements IController {
     req: Request,
     res: Response,
     id: any,
-    data: T2
+    data: any
   ): Promise<any> {
     const responseData = new ResponseData(res);
     await Cloudinary.update<T>(

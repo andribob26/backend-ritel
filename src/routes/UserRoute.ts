@@ -11,7 +11,7 @@ interface IData {
   lastLogin: any;
 }
 
-const controller = new UserController<IData>();
+const controller = new UserController();
 
 class UserRoute implements IRoute {
   private _app: Application;

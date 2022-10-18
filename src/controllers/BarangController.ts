@@ -4,7 +4,7 @@ import IBarang from "../models/interface_models/IBarang";
 import Barang from "../models/Barang";
 import ResponseData from "../utils/ResponseData";
 
-class BarangController<T> extends Controller<IBarang, T> {
+class BarangController extends Controller<IBarang> {
   constructor() {
     super(Barang);
   }

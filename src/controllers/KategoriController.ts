@@ -4,7 +4,7 @@ import IKategori from "../models/interface_models/IKategori";
 import Kategori from "../models/Kategori";
 
 
-class KategoriController<T> extends Controller<IKategori, T> {
+class KategoriController extends Controller<IKategori> {
   constructor() {
     super(Kategori);
   }

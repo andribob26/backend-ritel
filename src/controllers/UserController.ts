@@ -3,7 +3,7 @@ import Controller from "./Controller";
 import { InUser } from "../models/interface_models/IUser";
 import User from "../models/User";
 
-class UserController<T> extends Controller<InUser, T> {
+class UserController extends Controller<InUser> {
   constructor() {
     super(User);
   }

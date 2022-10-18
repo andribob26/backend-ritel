@@ -5,7 +5,7 @@ interface IData {
   name: string;
 }
 
-const controller = new KategoriController<IData>();
+const controller = new KategoriController();
 
 class KategoriRoute implements IRoute {
   private _app: Application;
